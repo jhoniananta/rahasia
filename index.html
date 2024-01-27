@@ -12,12 +12,10 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div id="audio-container">
-      <audio id="myAudio" autoplay loop>
-        <source src="musicJamrud.mp3" type="audio/mp3" />
-        Your browser does not support the audio element.
-      </audio>
-    </div>
+    <audio autoplay>
+      <source src="musicJamrud.mp3" type="audio/mpeg" />
+      Your browser does not support the audio element.
+    </audio>
 
     <div class="card">
       <div class="outside">
@@ -50,17 +48,12 @@
     </div>
     <script>
       var audio = document.getElementById("myAudio");
-      var audioContainer = document.getElementById("audio-container");
-    //   if (audio == null) {
-    //     audio.onplaying = function () {
-    //       console.log("Audio is not playing");
-    //       audio.play();
-    //     };
-    //   }
-      if (audioContainer.style.display === "none") {
-        audio.play();
-      } else {
-        audio.play();
+
+      // Check if the audio is playing
+      if (audio !== null) {
+        audio.onplaying = function () {
+          console.log("Audio is playing");
+        };
       }
     </script>
   </body>
