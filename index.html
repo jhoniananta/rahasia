@@ -12,7 +12,13 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <audio src="music.mp3" autoplay loop></audio>
+    <div id="audio-container">
+      <audio id="myAudio" autoplay loop>
+        <source src="musicJamrud.mp3" type="audio/mp3" />
+        Your browser does not support the audio element.
+      </audio>
+    </div>
+
     <div class="card">
       <div class="outside">
         <div class="front">
@@ -27,12 +33,35 @@
         <div class="back"></div>
       </div>
       <div class="inside">
-        <p>Wishing the happiest 20th birthday to my wonderful girlfriend! penpen 🥳🎂 On this special day, may your life be filled with joy, laughter, and all the love you truly deserve. May your dreams take flight, and every moment be as amazing as you are. Here's to another fantastic year ahead, filled with beautiful memories and exciting adventures together (with me ofc). Happy Birthday! luv 🎁🎈✨
-        <br>
-        <br>
-        Sending lots of love and warm wishes your way, and hoping this year brings you all the happiness in the world! 🎊💖</p>
+        <p>
+          Wishing the happiest 20th birthday to my wonderful girlfriend! penpen
+          🥳🎂 On this special day, may your life be filled with joy, laughter,
+          and all the love you truly deserve. May your dreams take flight, and
+          every moment be as amazing as you are. Here's to another fantastic
+          year ahead, filled with beautiful memories and exciting adventures
+          together (with me ofc). Happy Birthday! luv 🎁🎈✨
+          <br />
+          <br />
+          Sending lots of love and warm wishes your way, and hoping this year
+          brings you all the happiness in the world! 🎊💖
+        </p>
         <h1>&#127873;</h1>
       </div>
     </div>
+    <script>
+      var audio = document.getElementById("myAudio");
+      var audioContainer = document.getElementById("audio-container");
+    //   if (audio == null) {
+    //     audio.onplaying = function () {
+    //       console.log("Audio is not playing");
+    //       audio.play();
+    //     };
+    //   }
+      if (audioContainer.style.display === "none") {
+        audio.play();
+      } else {
+        audio.play();
+      }
+    </script>
   </body>
 </html>

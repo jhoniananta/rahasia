@@ -7,6 +7,9 @@
   body {
     background-color: #f5f5dc;
   }
+  .audioContainer{
+    display: none;
+  }
   .card {
     width: 640px;
     height: 500px;
